@@ -12,6 +12,7 @@ all:
 	fi
 	make -j$(HOST_NCPU) -C $(SRC_NAME)/CPP/7zip/Compress/LZMA_Alone -f makefile.gcc || { echo "Build failed"; exit 1; }
 	cp $(SRC_NAME)/CPP/7zip/Compress/LZMA_Alone/lzma ./lzma
+	@chmod +x ./lzma
 
 clean:
 	make -C $(SRC_NAME)/CPP/7zip/Compress/LZMA_Alone -f makefile.gcc clean
